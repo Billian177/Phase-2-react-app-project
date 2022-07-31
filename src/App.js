@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import PoemsContainer from "./PoemsContainer";
-import NewPoemForm from "./NewPoemForm";
+import QuoteContainer from "./QuoteContainer";
+import NewQuoteForm from "./NewQuoteForm";
 
 
 function App() {
   const [quotes, setQuotes] = useState([]);
   const [formVisible, setFormVisible] = useState(true);
   const [favoriteVisible, setFavoriteVisible] = useState(true);
-  const poemsToDisplay = poems.filter((poem) => favoriteVisible || poem.isFavorite);
+  const quotesToDisplay = quotes.filter((quote) => favoriteVisible || quote.isFavorite);
 
   useEffect(() => {
     fetch("https://type.fit/api/quotes")
@@ -15,25 +15,25 @@ function App() {
       .then(data => setQuotes(data))
   }, []);
 
-  function addQuotes(newQuote) {
-    setPoems([...quotes, newQuote]);
+  function addQuote(newQuote) {
+    setQuotes([...quotes, newQuote]);
   }
 
 
-  function addToFavorites(favPoem) {
-    setPoems(poems.map(poem => {
-      return poem.id === favPoem.id ? {...favPoem, isFavorite: !favPoem.isFavorite} : poem
+  function addToFavorites(favQuote) {
+    setQuotes(quotes.map(quote => {
+      return quote.id === favQuote.id ? {...favQuote, isFavorite: !favQuote.isFavorite} : quote
       }  
     ))
   }
 
-  function renderPoemView() {
-    if (poemsToDisplay.length === 0 && !favoriteVisible) {
-      return (<h1>You have no favorites added</h1>)
+  function renderQuoteView() {
+    if (quotesToDisplay.length === 0 && !favoriteVisible) {
+      return (<h1>You have no favorites in this section</h1>)
     } else {
       return (
-        <PoemsContainer 
-          poems={poemsToDisplay}
+        <QuoteContainer 
+          quotes={quotesToDisplay}
           addToFavorites={addToFavorites}
         />
       )
@@ -47,13 +47,15 @@ function App() {
           onClick={() => setFormVisible(!formVisible)} >
           Show/hide new poem form
         </button>
-        {formVisible ? <NewPoemForm addPoem={addPoem} /> : null}
+        {formVisible ? <NewQuoteForm addQuote={addQuote} /> : null}
 
         <button onClick={() => setFavoriteVisible(!favoriteVisible)} >
-          Show/hide Favorite Poems
+          Show/hide Favorite Quotes
         </button>
       </div>
-      {renderPoemView()}
+      {renderQuoteView()}
     </div>
   );
 }
+
+export default App;
