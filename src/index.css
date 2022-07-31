@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: bisque;
 }
 
 .app {
@@ -12,8 +13,7 @@ body {
   min-height: 100vh;
   min-width: 12em;
   width: 28%;
-  border-right: solid black 1px;
-  background: #e5fdff;
+  border-right: solid rgb(194, 3, 184) 1px;
   padding: 1em;
 }
 
@@ -36,8 +36,7 @@ body {
   min-width: 4em;
 }
 
-form.new-quote-form {
-  border: solid black 1px;
+form.new-Quote-form {
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -54,8 +53,25 @@ input[type="submit"],
 button {
   font-weight: bold;
   font-size: 1em;
-  background: rgb(231, 7, 157);
+  background: rgb(214, 5, 144);
   border: solid black 1px;
   padding: 0.5em;
   cursor: pointer;
+}
+
+#NavBar {
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-bottom: 2px solid rgb(214, 15, 154);
+  transition: 0.1s;
+}
+
+#logo{
+  color: #440339;
+  font-size: 50px;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: solid;
 }

@@ -45,7 +45,7 @@ function App() {
       <div className="sidebar">
         <button 
           onClick={() => setFormVisible(!formVisible)} >
-          Show/hide new poem form
+          Show/hide new Quote form
         </button>
         {formVisible ? <NewQuoteForm addQuote={addQuote} /> : null}
 

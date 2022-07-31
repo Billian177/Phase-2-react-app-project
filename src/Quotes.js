@@ -17,7 +17,7 @@ function Quotes({quote, addToFavorites}) {
       </button>
 
       <button onClick={() => addToFavorites(quote)}>
-        {quote.isFavorite ? "Unfavorite" : "♥ Favorite" }
+        {quote.isFavorite ? "Like" : "♥ Liked" }
       </button>
     </div>
   );
