@@ -41,8 +41,8 @@ form.new-Quote-form {
   flex-direction: column;
 }
 
-form.new-quote-form > input,
-form.new-quote-form > textarea {
+form.new-Quote-form > input,
+form.new-Quote-form > textarea {
   font-size: 1em;
   font-family: sans-serif;
   margin-bottom: 0.5em;
@@ -53,9 +53,8 @@ button {
   font-weight: bold;
   font-size: 1em;
   background: rgb(214, 5, 144);
-  border: solid black 1px;
+  border: none;
   padding: 0.5em;
-  cursor: pointer;
 }
 
 #NavBar {

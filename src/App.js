@@ -45,12 +45,12 @@ function App() {
       <div className="sidebar">
         <button 
           onClick={() => setFormVisible(!formVisible)} >
-          Show/hide new Quote form
+          Hide new Quote form
         </button>
         {formVisible ? <NewQuoteForm addQuote={addQuote} /> : null}
 
         <button onClick={() => setFavoriteVisible(!favoriteVisible)} >
-          Show/hide Favorite Quotes
+          Show Favorite Quotes
         </button>
       </div>
       {renderQuoteView()}
