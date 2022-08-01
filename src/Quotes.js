@@ -13,7 +13,7 @@ function Quotes({quote, addToFavorites}) {
         <strong>- By {author}</strong>
       </p>
       <button onClick={() => setIsRead(!isRead)} >
-        Mark as {isRead ? "unread" : "read" }
+        {isRead ? "unread" : "read" }
       </button>
 
       <button onClick={() => addToFavorites(quote)}>
