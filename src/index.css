@@ -52,7 +52,7 @@ input[type="submit"],
 button {
   font-weight: bold;
   font-size: 1em;
-  background: rgb(214, 5, 144);
+  background: rgb(197, 178, 5);
   border: none;
   padding: 0.5em;
 }
@@ -62,12 +62,12 @@ button {
   margin: 0 1rem;
   text-decoration: none;
   font-size: 1.2em;
-  border-bottom: 2px solid rgb(214, 15, 154);
+  border-bottom: 2px solid rgb(230, 226, 8);
   transition: 0.1s;
 }
 
 #logo{
-  color: #440339;
+  color: #290823;
   font-size: 50px;
   font-style: italic;
   font-family: 'Times New Roman', Times, serif;
